@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato / Pedido — Palha Ninho & Oreo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Palha Ninho & Oreo</h1>
+      <nav class="main-nav">
+        <a href="index.html">Início</a>
+        <a href="contato.html" class="active">Pedido / Contato</a>
+        <a href="contato.html#pedido-form">palha italiana</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contato-section">
+      <h2>Faça seu pedido</h2>
+      <p class="lead">Preço: <strong>R$ 6</strong> por unidade. Informe a quantidade desejada abaixo.</p>
+
+      <form id="pedido-form" class="pedido-form" onsubmit="return handleOrder(event)">
+        <label>
+          Nome
+          <input type="text" id="nome" name="nome" required />
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" id="email" name="email" required />
+        </label>
+
+        <label>
+          Telefone (para contato)
+          <input type="tel" id="telefone" name="telefone" />
+        </label>
+
+        <label>
+          Quantidade (unidades)
+          <input type="number" id="quantidade" name="quantidade" value="1" min="1" required />
+        </label>
+
+        <label>
+          Observações / Endereço (opcional)
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Ex.: entrega na Estrada dos Alvarengas, bloco X"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar pedido por e-mail</button>
+          <button type="button" class="btn outline" id="btn-whatsapp">Enviar pelo WhatsApp</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Outras formas de contato</h3>
+        <p>Email: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a> (substitua pelo seu e-mail)</p>
+        <p>WhatsApp: <a href="https://wa.me/5511986007717" target="_blank" rel="noopener">(11) 98600-7717</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-2"></span> Palha Ninho & Oreo — Entregas: Estrada dos Alvarengas, Jardim Thelma e São Bernardo do Campo.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a class="fab-wa" href="https://wa.me/5511986007717" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20.5 3.5A11.9 11.9 0 0012 1a11.9 11.9 0 00-8.5 2.5A12 12 0 001 12c0 2.1.55 4.1 1.6 5.9L1 23l4.3-1.1A11.9 11.9 0 0012 23c3.2 0 6.2-1.2 8.5-3.5S24 15.2 24 12 22.5 6.8 20.5 3.5z" fill="#25D366"/>
+      <path d="M17.2 14.7c-.3-.2-1.8-.9-2-.9-.2 0-.4-.1-.6.2-.2.3-.8.9-1 .9s-.3 0-.5-.1c-.4-.1-1.2-.4-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.4 0-.6.1-.8.1-.2.2-.3.4-.5.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2.1-.4 0-.1 0-.3-.1-.4-.1-.1-.9-2-1.2-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.5 0-.8.3-.3.3-1 1-1 2.5 0 1.5 1 3 1.1 3.2.1.2 1.9 3 4.6 4.2 3.2 1.4 3.2 1 3.8 1 0 0 1-.4 1.1-.9.1-.5.1-1 .1-1.1.1-.2.1-.4 0-.6-.1-.2-.3-.3-.6-.5z" fill="#fff"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
